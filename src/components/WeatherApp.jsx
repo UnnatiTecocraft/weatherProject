@@ -20,7 +20,7 @@ const WeatherApp = () => {
     <>
       <div className="main_div">
         <div className="center_div">
-          <input type="search" placeholder="Enter name of any city" className="inputfield" value={search}
+          <input type="search" placeholder="Enter city" className="inputfield" value={search}
               onChange={(e) => {
                   setSearch(e.target.value);
               }}

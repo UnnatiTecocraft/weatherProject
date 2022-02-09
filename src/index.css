@@ -116,5 +116,12 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 412px) {
+  .center_div {
+    width: 80%;
+    height: 60vh;
+  }
+  .info {
+    height: 50vh;
+  }
 }
