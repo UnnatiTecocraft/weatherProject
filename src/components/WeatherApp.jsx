@@ -13,7 +13,6 @@ const WeatherApp = () => {
             const resJson = await response.json();  
             setCity(resJson.main);
             setCountry(resJson.sys.country);
-            console.log(resJson);
         }
         fetchApi();
     }, [search]);
@@ -32,7 +31,7 @@ const WeatherApp = () => {
                 <div className="info">
                     <h2 className="location"><i className="fas fa-map-marker-alt"/>     {search}, {country}</h2>
                     <h1 className="temp">{city.temp}° C</h1>
-                    <h3 className="tempmin_max">Min: {city.temp_min}° C  | Max: {city.temp_max}° C </h3>
+                    <h3 className="tempmin_max">Min : {city.temp_min}° C  | Max : {city.temp_max}° C </h3>
                 </div>
                 <div className="wave -one"/>
                 <div className="wave -two"/>

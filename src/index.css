@@ -26,6 +26,7 @@
 }
 .inputfield {
   width: 70%;
+  height: 6vh;
   margin-top: 50px;
   padding: 10px 20px;
   border-radius: 20px;
@@ -67,8 +68,10 @@
   font-size: 25px;
 }
 .tempmin_max {
-  margin-top: 2px;
-  font-size: 18px;
+  margin-top: 6px;
+  font-size: 16px;
+  color: #6e85ac;
+  font-weight: 600 !important;
 }
 
 .wave {
@@ -111,4 +114,7 @@
   from {
     transform: rotate(360deg);
   }
+}
+
+@media (max-width: 600px) {
 }
