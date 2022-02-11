@@ -16,33 +16,33 @@ const WeatherApp = () => {
         }
         fetchApi();
     }, [search]);
-  return (
-    <>
-      <div className="main_div">
-        <div className="center_div">
-          <input type="search" placeholder="Enter city" className="inputfield" value={search}
-              onChange={(e) => {
-                  setSearch(e.target.value);
-              }}
-          />
-          {!city ? (
-              <p>No data found</p>
-          ) : <>
-                <div className="info">
-                    <h2 className="location"><i className="fas fa-map-marker-alt"/>     {search}, {country}</h2>
-                    <h1 className="temp">{city.temp}° C</h1>
-                    <h3 className="tempmin_max">Min : {city.temp_min}° C  | Max : {city.temp_max}° C </h3>
+    
+    return (
+        <>
+            <div className="main_div">
+                <div className="center_div">
+                    <input type="search" placeholder="Enter city" className="inputfield" value={search}
+                        onChange={(e) => {
+                            setSearch(e.target.value);
+                        }}
+                    />
+                    {!city ? (
+                        <p>No data found</p>
+                    ) : <>
+                            <div className="info">
+                                <h2 className="location"><i className="fas fa-map-marker-alt"/>     {search}, {country}</h2>
+                                <h1 className="temp">{city.temp}° C</h1>
+                                <h3 className="tempmin_max">Min : {city.temp_min}° C  | Max : {city.temp_max}° C </h3>
+                            </div>
+                            <div className="wave -one"/>
+                            <div className="wave -two"/>
+                            <div className="wave -three"/>
+                        </>
+                    }
                 </div>
-                <div className="wave -one"/>
-                <div className="wave -two"/>
-                <div className="wave -three"/>
-            </>
-          }
-          
-        </div>
-      </div>
-    </>
-  );
+            </div>
+        </>
+    );
 };
 
 export default WeatherApp;
